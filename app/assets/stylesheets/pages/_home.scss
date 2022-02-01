@@ -3,7 +3,11 @@
   color: white;
   text-align: center;
   height: 100vh;
-  background-color: antiquewhite;
+  background-image: asset-url("castle-homepage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-content{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,8 +34,4 @@
 
 .border-radius {
   border-radius: 10px;
-}
-
-.title-index-padding {
-  padding-bottom: 30px;
 }
