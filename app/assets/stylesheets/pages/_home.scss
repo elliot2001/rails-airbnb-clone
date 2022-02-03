@@ -1,57 +1,70 @@
-// Specific CSS for your home-page
- /* .banner {
-  color: white;
-  text-align: center;
+/*------------Container Homepage-----------*/
+.container{
+  width: 100%;
   height: 100vh;
-  background-image: asset-url("castle-homepage.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.banner-content{
+.intro-homepage-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+.col {
+    flex: 1;
+    padding: 1em;
+    width: 40%;
 }
-.banner p {
-  font-size: 24px;
-  font-weight: normal;
-  color: white;
-  margin-bottom: 20px;
+.col h1{
+      margin-top: 200px;
+}
+
+.col p{
+  margin-bottom: 30px;
+}
+
+.image-homepage{
+  background-image: asset-url("castle-home.jpg");
+  background-repeat: no-repeat;
+  max-width: 70%;
+  width: 50%;
+  height: 80vh;
+  margin-top: -40px;
+  background-size: cover;
+  border-radius: 15px;
 }
 
 #point{
   color: #E2AB1A;
 }
-.btn {
-  border-radius: 10px;
+
+.form-control{
+  height: 3em;
 }
 
-.border-radius {
-  border-radius: 10px;
+.search-bar{
+  margin-bottom: 50px;
 }
-*/
-.container{
-  width: 100%;
+/*------------NUMBER-----------*/
+
+.number{
+    display: flex;
 }
-.row h1{
-  margin-top: 300px;
-}
-.row {
-  display: flex;
+  .counter-number {
+    line-height: 48px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #E2AB1A;
+  }
+  .counter-title {
+    color: #424242;
+
+    strong {
+      display: block;
+      font-size: 1.2rem;
+    }
+
 }
 
-.col {
-    flex: 1;
-    padding: 1em;
-}
-
-.col-1{
-  background-image: asset-url("castle-homepage.jpg");
-  background-repeat: no-repeat;
+.number-alignement{
+  margin-right: 60px;
 }
