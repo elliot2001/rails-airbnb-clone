@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All castles</h1>
+      <ul class="list-group">
+        <% @castles.each do |castle| %>
+          <li class="list-group-item">
+            <%= link_to castle.title, castles_path(castle) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

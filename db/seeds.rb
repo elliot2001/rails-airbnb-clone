@@ -4,6 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+<<<<<<< HEAD
 #   Character.create(name: 'Luke', movie: movies.first
 
 puts "Destroying current data --------------------------"
@@ -27,3 +28,7 @@ Castle.create(id: 2, address: "19rue", title: "chambort2", price: 150, descripti
 
 
 # bookings pour r créer le sbookings
+=======
+#   Character.create(name: 'Luke', movie: movies.first)
+Castle.create(address: 'Toulouse', title: 'Majestueux château aux abords de la ville', price: '550€', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', max_capacity: 10)
+>>>>>>> master
