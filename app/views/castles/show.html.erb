@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <%= image_tag "Logo.png", alt: "logo", class: "logo" %>
+    </div>
+    <div>
+      <!-- Content -->
+    </div>
+    <div>
+      <button type="button" class="btn btn-secondary">Se connecter.</button>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <%= image_tag "Chateau1.jpg", alt: "Chateau 1", class: "rounded", width: 500 %>
+</div>
+
+<div class="container"><button type="button" class="btn btn-secondary">Découvrir toutes les photos.</button></div>
+<br>
+<div class="container">
+  <div class="mb-4">
+    <h1 class="castle-title"><%= @castle.title %></h1>
+      <!-- Solid divider -->
+      <hr class="solid">
+  </div>
+</div>
+
+<div class="container details-chateau">
+  <h3>À propos de cette location</h3>
+  <%= @castle.address %> | <%= @castle.max_capacity %> voyageurs |
+</div>
+<br>
+
+<div class="container description-chateau">
+  <ul class="description">
+    <li>
+      <i class="fas fa-home"></i> <b>Logement entier</b>
+      <p>Vous aurez le logement en entier</p>
+    </li>
+    <li>
+      <i class="fas fa-broom"></i> <b>Nettoyage renforcé</b>
+      <p>Cet hôte s'engage à appliquer le processus de nettoyage renforcé en 5 étapes</p>
+    </li>
+    <li>
+      <i class="fas fa-star"></i> <b>Julia est SUPERHOST</b>
+      <p>Les Superhosts sont des hôtes expérimentés qui bénéficient de très bonnes évaluations et qui s'engagent à offrir d'excellents séjours aux voyageurs.</p>
+    </li>
+    <li>
+      <i class="fas fa-times"></i> <b>Annulation gratuite</b>
+      <p>Si vous annulez avant X</p>
+    </li>
+  </ul><br>
+<%= @castle.description %>
+</div>
