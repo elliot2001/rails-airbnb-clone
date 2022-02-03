@@ -1,0 +1,44 @@
+body {
+  background-color: white;
+}
+
+.logo {
+  background-size: cover;
+  width: 200px;
+}
+
+.row {
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.btn-secondary {
+  background-color: #E2AB1A;
+  border: solid #E2AB1A;
+}
+
+.btn-secondary:hover {
+  background-color: black;
+  border: solid black;
+}
+
+hr.solid {
+    border-top: 3px solid #E2AB1A;
+}
+
+.details-chateau {
+  font-size: 14px;
+}
+
+.fas {
+  font-size: 30px;
+}
+
+.description {
+  list-style-type: none
+}
+
+.castle-title {
+  text-transform: uppercase;
+  font-size: 30px
+}
