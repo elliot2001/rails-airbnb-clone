@@ -1,4 +1,4 @@
-<div class="banner">
+<%# <div class="banner">
   <div class="banner-content">
     <h1>Recherche ta prochaine destination<span id="point">.</span></h1>
     <p>N'attendez pas pour vivre une expérience dans un château dans le monde</p>
@@ -6,8 +6,25 @@
     <div class="search-bar">
       <form action="/castles" class="form-inline padded">
         <%# <input type="text" class="form-control border-radius input-lg" placeholder=""> %>
-        <input type="submit" class="btn btn-warning btn-lg ms-15" value="Voir tous les châteaux">
+        <%# <input type="submit" class="btn btn-warning btn-lg ms-15" value="Voir tous les châteaux">
       </form>
     </div>
   </div>
+</div> %>
+<div class="container">
+<div class="row">
+      <div class="col">
+        <h1>Recherche ta prochaine destination<span id="point">.</span></h1>
+        <p>N'attendez pas pour vivre une expérience dans un château dans le monde</p>
+    </div>
+      <div class="col col-1">
+      </div>
+    </div>
+
+        <div class="search-bar">
+            <form action="/castles" class="form-inline padded">
+                <input type="text" class="form-control border-radius input-lg" placeholder="">
+                <input type="submit" class="btn btn-warning btn-lg ms-15" value="Voir tous les châteaux">
+            </form>
+        </div>
 </div>
