@@ -12,11 +12,21 @@
   </div>
 </div>
 
-<div class="text-center">
-  <%= image_tag "Chateau1.jpg", alt: "Chateau 1", class: "rounded", width: 500 %>
+<div class="photos-grid d-flex justify-content-center">
+  <div class="photo-description">
+    <%= image_tag "Chateau1.jpg", alt: "Chateau 1", class: "rounded", width: 500 %>
+  </div>
+  <div class="thumbnail flex-column">
+    <div class="item-1">
+      <%= image_tag "Piece.jpg", alt: "Chateau 1", class: "rounded", width: 250 %>
+    </div>
+    <div class="item-2">
+      <%= image_tag "bathroom.jpg", alt: "Chateau 1", class: "rounded", width: 250 %>
+    </div>
+  </div>
 </div>
-
-<div class="container"><button type="button" class="btn btn-secondary">Découvrir toutes les photos.</button></div>
+<br>
+<div class="container"><button type="button" class="btn btn-secondary btn-photos">Découvrir toutes les photos.</button></div>
 <br>
 <div class="container">
   <div class="mb-4">
