@@ -26,8 +26,4 @@ Castle.create(address: "19rue", title: "chambort", price: 150, description: "no"
 Castle.create(address: "19rue", title: "chambort2", price: 150, description: "no", max_capacity: 200, user: annelaure)
 
 
-# bookings pour r créer le sbookings
-
-
-
-
+# bookings pour r créer le sbookings*

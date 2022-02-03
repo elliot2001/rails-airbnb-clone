@@ -1,0 +1,20 @@
+<h1 class="p-2">TOUS NOS CHATEAUX</h1>
+
+<div class="d-flex justify-content-around flex-column">
+  <ul class="list-group list-group-horizontal">
+    <% @castles.each do |castle| %>
+      <li class="list-group-item m-4 flex-wrap">
+        <div class="castle">
+          <img src="https://source.unsplash.com/300x200/?castles" alt="castles img">
+          <h3><%= castle.title %></h3>
+          <p><%= castle.description %></p>
+          <p><i class="fa-solid fa-person"></i> <%= castle.max_capacity %>
+          <i class="fa-solid fa-circle-dollar"></i> <%= castle.price %>€</p>
+        </div>
+        <div class="links d-flex justify-content-around">
+          <%= link_to "More info", castle_path(castle)%>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
