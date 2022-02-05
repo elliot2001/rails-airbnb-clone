@@ -1,5 +1,14 @@
 class BookingsController < ApplicationController
+
   def new
+    @dates = []
+    if params[:search].nil? 
+      @tmp = "test"
+    else
+      @tmp = params[:search]
+    end
+
+
     @castle = Castle.find(params[:castle_id])
     @booking = Booking.new
   end
