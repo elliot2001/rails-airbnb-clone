@@ -1,5 +1,11 @@
 class BookingsController < ApplicationController
   def new
+    if params[:search].nil? 
+      @tmp = "test"
+    else
+      @tmp = params[:search]
+    end 
+
     @castle = Castle.find(params[:castle_id])
     @booking = Booking.new
   end
@@ -17,6 +23,10 @@ class BookingsController < ApplicationController
   end
 
   private
+
+  def parse_date(str_date)
+    
+  end
 
   def booking_params
     params.require(:booking).permit(:arrival_date, :departure, :number_of_people, :status, :user_id, :castle_id)
