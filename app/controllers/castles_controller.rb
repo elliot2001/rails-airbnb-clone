@@ -1,4 +1,5 @@
 class CastlesController < ApplicationController
+  before_action :authenticate_user!, only: %i[new create]
   def index
     @castles = Castle.all
   end
@@ -12,9 +13,17 @@ class CastlesController < ApplicationController
   end
 
   def create
-    @castle = Castle.new
-    @castle.save
-
-    redirect_to castle_path(@castle)
+    @castle = Castle.new(castle_params)
+    @castle.user = current_user
+    if @castle.save
+      redirect_to castle_path(@castle)
+    else
+      render :new
+    end
   end
+
+  def castle_params
+    params.require(:castle).permit(:address, :title, :price, :description, :max_capacity)
+  end
+
 end

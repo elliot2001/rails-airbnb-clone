@@ -1,7 +1,8 @@
 <div class="container">
+
   <div class="row">
     <div>
-      <%= image_tag "Logo.png", alt: "logo", class: "logo" %>
+      <%= image_tag "logo.png", alt: "logo", class: "logo" %>
     </div>
     <div>
       <!-- Content -->
@@ -12,11 +13,22 @@
   </div>
 </div>
 
-<div class="text-center">
-  <%= image_tag "Chateau1.jpg", alt: "Chateau 1", class: "rounded", width: 500 %>
-</div>
 
-<div class="container"><button type="button" class="btn btn-secondary">Découvrir toutes les photos.</button></div>
+<div class="photos-grid d-flex justify-content-center">
+  <div class="photo-description">
+    <%= image_tag "Chateau1.jpg", alt: "Chateau 1", class: "rounded", width: 500 %>
+  </div>
+  <div class="thumbnail flex-column">
+    <div class="item-1">
+      <%= image_tag "Piece.jpg", alt: "Chateau 1", class: "rounded", width: 250 %>
+    </div>
+    <div class="item-2">
+      <%= image_tag "bathroom.jpg", alt: "Chateau 1", class: "rounded", width: 250 %>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container"><button type="button" class="btn btn-secondary btn-photos">Découvrir toutes les photos.</button></div>
 <br>
 <div class="container">
   <div class="mb-4">
@@ -53,3 +65,16 @@
   </ul><br>
 <%= @castle.description %>
 </div>
+
+
+  <div class="container">
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <h2>Calendrier des réservations</h2>
+      <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: { id: "range_start" } %>
+        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+  <h1> <%= @tmp %> </h1>

@@ -1,0 +1,12 @@
+<h1>Add a new list</h1>
+
+<h1> hi </h1>
+
+<%= simple_form_for(@castle) do |f| %>
+  <%= f.input :address %>
+  <%= f.input :title %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :max_capacity %>
+  <%= f.submit "Submit"%>
+<% end %>
