@@ -1,12 +1,27 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  margin-left: 150px;
+  margin-right: 135px;
+  margin-bottom: 50px;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .-brand img {
-  width: 40px;
+.navbar-lewagon .navbar-brand img {
+  width: 200px;
 }
 
-.navbar-wagon-brand img {
-  width: 10%;
-  z-index: 111111;
+.nav-item-logout {
+  color: black;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.nav-item-logout a {
+  color: black;
+  text-decoration: none;
+  padding: 0px 10px;
 }

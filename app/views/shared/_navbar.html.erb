@@ -1,16 +1,27 @@
-<div class="navbar-wagon navbar-fixed-top">
-  <!-- Logo -->
-   <div class="row">
-    <div>
-      <%= image_tag "logo.png", alt: "logo", class: "logo" %>
-    </div>
-    <div>
-      <!-- Content -->
-    </div>
-    <div>
-      <button type="button" class="btn btn-secondary">Se connecter.</button>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Se connecter", new_user_session_path, class: "btn btn-secondary" %>
+          </li>
+          <li class="nav-item-logout">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Se connecter", new_user_session_path, class: "btn btn-secondary" %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
-  <!-- Right Navigation -->
-    <!-- Different navigation if login or not -->
