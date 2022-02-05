@@ -1,0 +1,70 @@
+.intro-dashboard-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col1 {
+    padding: 1em;
+    width: 70%;
+    z-index: 11111;
+}
+.col1 h1{
+    margin-top: 200px;
+}
+
+.col1 p{
+  margin-bottom: 30px;
+}
+
+.image-dashboard{
+  background-image: asset-url("dashboard.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70%;
+  height: 90vh;
+  margin-top: -100px;
+  background-size: cover;
+  border-radius: 15px;
+  z-index: -10000;
+}
+
+.search-bar{
+  margin-bottom: 50px;
+  z-index: 888888;
+}
+
+/*---------------PARAMETRES----------------*/
+
+#h2-reservations{
+margin-left: 60px;
+font-weight: bold;
+}
+
+.list-parametre ul li{
+  text-decoration: none;
+  list-style: none;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.rwd-table {
+text-align: right;
+}
+
+th{
+  padding: 50px;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+.rounded{
+  border-radius: 15px !important
+}
+
+#title-reservation{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+#commentaires{
+  font-weight: 500;
+  color: #E2AB1A;
+}
