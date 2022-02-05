@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :castles
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :castles do
-    resources :bookings, only: [:create]
-
+    resources :bookings, only: [:create, :new]
   end
-  resources :bookings, only: [:index, :show, :destroy, :update] do
+
+  resources :bookings, only: [:index, :show] do
       resources :reviews, only: [:create, :index, :show]
     end
 
