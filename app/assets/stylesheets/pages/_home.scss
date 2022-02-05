@@ -5,13 +5,6 @@
   z-index: 111111;
 }
 
-.row {
-  width: 60%;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  margin-left: 150px;
-}
-
 .btn-secondary {
   background-color: #E2AB1A;
   border: solid #E2AB1A;
@@ -96,12 +89,4 @@
 .number-alignement{
   margin-right: 60px;
 }
-/*------------POPULAIRE----------*/
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border: none;
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-  }
-  }
+

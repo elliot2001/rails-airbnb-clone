@@ -1,19 +1,18 @@
-.flex {
-  display: flex;
+.castles-container {
+  width: 60%;
 }
 
-.flex-align {
-  display: flex;
-  align-items: center;
+.row {
+  width: 80%;
   justify-content: space-between;
+  margin-bottom: 30px;
+  
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding: 16px;
-  flex-grow: 1;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px; 
+  column-gap: 20px;
 }
 
 @media (min-width: 100px) {
@@ -35,7 +34,7 @@
 .flat-card {
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 300px;
   position: relative;
   background-color: #ffffff;
   border-radius: 8px;
