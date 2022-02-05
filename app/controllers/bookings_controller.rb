@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
+   def index
+    @bookings = Booking.all
 
   def new
     @dates = []
-    if params[:search].nil? 
+    if params[:search].nil?
       @tmp = "test"
     else
       @tmp = params[:search]
