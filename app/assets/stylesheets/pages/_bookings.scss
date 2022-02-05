@@ -22,8 +22,8 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 70%;
-  height: 90vh;
-  margin-top: -100px;
+  height: 80vh;
+  margin-top: -120px;
   background-size: cover;
   border-radius: 15px;
   z-index: -10000;
@@ -47,15 +47,29 @@ font-weight: bold;
   margin-top: 50px;
   font-weight: bold;
 }
-.rwd-table {
-text-align: right;
+.tabs-underlined {
+  display: flex;
+  align-items: center;
 }
 
-th{
-  padding: 50px;
-  font-size: 1.5em;
-  font-weight: normal;
+.tabs-underlined .tab-underlined {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 8px;
+  margin: 8px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
 }
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+}
+#hover-dashboard:hover{
+border-bottom: #E2AB1A solid 3px;
+}
+
 .rounded{
   border-radius: 15px !important
 }
@@ -63,6 +77,53 @@ th{
 #title-reservation{
   font-weight: bold;
   font-size: 1.5em;
+}
+
+
+.reservations{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-reservation{
+  margin-right: 250px;
+}
+
+#line-reservation{
+border: solid #E2AB1A 1px;
+}
+
+/*---------------CARD----------------*/
+.card-product {
+  overflow: hidden;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
 }
 #commentaires{
   font-weight: 500;
