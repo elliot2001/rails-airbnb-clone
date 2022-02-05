@@ -1,0 +1,131 @@
+.intro-dashboard-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col1 {
+    padding: 1em;
+    width: 70%;
+    z-index: 11111;
+}
+.col1 h1{
+    margin-top: 200px;
+}
+
+.col1 p{
+  margin-bottom: 30px;
+}
+
+.image-dashboard{
+  background-image: asset-url("dashboard.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70%;
+  height: 80vh;
+  margin-top: -120px;
+  background-size: cover;
+  border-radius: 15px;
+  z-index: -10000;
+}
+
+.search-bar{
+  margin-bottom: 50px;
+  z-index: 888888;
+}
+
+/*---------------PARAMETRES----------------*/
+
+#h2-reservations{
+margin-left: 60px;
+font-weight: bold;
+}
+
+.list-parametre ul li{
+  text-decoration: none;
+  list-style: none;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+}
+
+.tabs-underlined .tab-underlined {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 8px;
+  margin: 8px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+}
+#hover-dashboard:hover{
+border-bottom: #E2AB1A solid 3px;
+}
+
+.rounded{
+  border-radius: 15px !important
+}
+
+#title-reservation{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+
+.reservations{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-reservation{
+  margin-right: 250px;
+}
+
+#line-reservation{
+border: solid #E2AB1A 1px;
+}
+
+/*---------------CARD----------------*/
+.card-product {
+  overflow: hidden;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+#commentaires{
+  font-weight: 500;
+  color: #E2AB1A;
+}
