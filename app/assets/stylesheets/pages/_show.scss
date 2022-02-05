@@ -3,23 +3,27 @@ body {
 }
 
 .logo {
-  background-size: cover;
-  width: 200px;
+  margin-left: 300px;
+  z-index: 111111;
 }
 
 .row {
+  width: 60%;
   justify-content: space-between;
   margin-bottom: 30px;
+  margin-left: 150px;
 }
 
 .btn-secondary {
   background-color: #E2AB1A;
   border: solid #E2AB1A;
+  z-index: 111111;
 }
 
 .btn-secondary:hover {
   background-color: black;
   border: solid black;
+  z-index: 111111;
 }
 
 hr.solid {
