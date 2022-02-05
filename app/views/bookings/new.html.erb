@@ -1,6 +1,12 @@
-<%= @tmp %>
+<div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+  <h2>Calendrier des réservations</h2>
+  <%= simple_form_for :search, method: "get" do |f| %>
+    <%= f.input :Entrez_vos_dates, as: :string, required: false, input_html: { id: "range_start" } %>
+    <%= f.button :submit, "Proposer mes dates", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
-<%= simple_form_for(@booking) do |f| %>
+<%= simple_form_for([@castle, @booking]) do |f| %>
   <%= f.input :number_of_people %>
   <%= f.submit "Book!"%>
 <% end %>
