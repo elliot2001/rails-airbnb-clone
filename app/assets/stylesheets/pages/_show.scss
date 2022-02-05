@@ -7,13 +7,6 @@ body {
   z-index: 111111;
 }
 
-.row {
-  width: 60%;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  margin-left: 150px;
-}
-
 .btn-secondary {
   background-color: #E2AB1A;
   border: solid #E2AB1A;
@@ -30,8 +23,21 @@ hr.solid {
     border-top: 3px solid #E2AB1A;
 }
 
+.container-details {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.container-photos {
+  margin-left: 170px;
+}
+
 .details-chateau {
   font-size: 14px;
+}
+
+.container-details-chateau {
+  margin-left: 150px;
 }
 
 .fas {

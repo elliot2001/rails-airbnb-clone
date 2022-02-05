@@ -1,18 +1,3 @@
-<div class="container">
-
-  <div class="row">
-    <div>
-      <%= image_tag "logo.png", alt: "logo", class: "logo" %>
-    </div>
-    <div>
-      <!-- Content -->
-    </div>
-    <div>
-      <button type="button" class="btn btn-secondary">Se connecter.</button>
-    </div>
-  </div>
-</div>
-
 
 <div class="photos-grid d-flex justify-content-center">
   <div class="photo-description">
@@ -28,9 +13,9 @@
   </div>
 </div>
 <br>
-<div class="container"><button type="button" class="btn btn-secondary btn-photos">Découvrir toutes les photos.</button></div>
+<div class="container-photos"><button type="button" class="btn btn-secondary btn-photos">Découvrir toutes les photos.</button></div>
 <br>
-<div class="container">
+<div class="container-details">
   <div class="mb-4">
     <h1 class="castle-title"><%= @castle.title %></h1>
       <!-- Solid divider -->
@@ -38,7 +23,7 @@
   </div>
 </div>
 
-<div class="container details-chateau">
+<div class="container-details-chateau">
   <h3>À propos de cette location</h3>
   <%= @castle.address %> | <%= @castle.max_capacity %> voyageurs |
 </div>
