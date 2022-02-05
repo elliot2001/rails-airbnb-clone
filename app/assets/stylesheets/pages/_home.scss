@@ -48,11 +48,10 @@
   background-position: center;
   width: 70%;
   height: 100vh;
-  margin-top: -120px;
-  margin-top: -100px;
+  margin-top: -150px;
   background-size: cover;
   border-radius: 15px;
-  z-index: -10000;
+  z-index: -100000;
 }
 
 #point{
@@ -62,10 +61,10 @@
 .form-control{
   height: 3em;
 }
-
-.search-bar{
-  margin-bottom: 50px;
-  z-index: 888888;
+.form-inline .form-control {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
 }
 /*------------NUMBER-----------*/
 
