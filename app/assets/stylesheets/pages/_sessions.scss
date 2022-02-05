@@ -1,6 +1,7 @@
 .signin {
   background-image: asset-url('chato.jpg');
   background-size: cover;
+  padding-top: 100px;
 }
 
 .form {
@@ -8,6 +9,20 @@
   border-radius: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   margin-right: 300px;
   margin-left: 300px;
+  margin-bottom: 100px;
+}
+
+.signin-links {
+  color: black;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.signin-links a {
+  color: black;
+  text-decoration: none;
 }
