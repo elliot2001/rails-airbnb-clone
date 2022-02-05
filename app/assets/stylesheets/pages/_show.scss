@@ -11,12 +11,14 @@ body {
   background-color: #E2AB1A;
   border: solid #E2AB1A;
   color: white;
+  text-decoration: none;
 }
 
 .btn-secondary:hover {
   background-color: black;
   border: solid black;
   color: white;
+  text-decoration: none;
 }
 
 hr.solid {
@@ -59,4 +61,9 @@ hr.solid {
 
 .btn-photos {
   margin-left: 170px;
+}
+
+.btn-lg {
+  margin-top: 50px;
+  font-size: 16px;
 }
