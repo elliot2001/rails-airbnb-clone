@@ -1,18 +1,3 @@
-<div class="container">
-
-  <div class="row">
-    <div>
-      <%= image_tag "logo.png", alt: "logo", class: "logo" %>
-    </div>
-    <div>
-      <!-- Content -->
-    </div>
-    <div>
-      <button type="button" class="btn btn-secondary">Se connecter.</button>
-    </div>
-  </div>
-</div>
-
 
 <div class="photos-grid d-flex justify-content-center">
   <div class="photo-description">
@@ -28,9 +13,9 @@
   </div>
 </div>
 <br>
-<div class="container"><button type="button" class="btn btn-secondary btn-photos">Découvrir toutes les photos.</button></div>
+<div class="container-photos"><button type="button" class="btn btn-secondary btn-photos">Découvrir toutes les photos.</button></div>
 <br>
-<div class="container">
+<div class="container-details">
   <div class="mb-4">
     <h1 class="castle-title"><%= @castle.title %></h1>
       <!-- Solid divider -->
@@ -38,7 +23,7 @@
   </div>
 </div>
 
-<div class="container details-chateau">
+<div class="container-details-chateau">
   <h3>À propos de cette location</h3>
   <%= @castle.address %> | <%= @castle.max_capacity %> voyageurs |
 </div>
@@ -64,17 +49,6 @@
     </li>
   </ul><br>
 <%= @castle.description %>
+<div class="bouton-reservation"></div>
+  <%= link_to "Réserver ce château", new_castle_booking_path(@castle.id), class: "btn btn-secondary btn-lg btn-block" %>
 </div>
-
-
-  <div class="container">
-    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-      <h2>Calendrier des réservations</h2>
-      <%= simple_form_for :search, method: "get" do |f| %>
-        <%= f.input :starts_at, as: :string, required: false, input_html: { id: "range_start" } %>
-        <%= f.button :submit, "Go", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-  </div>
-
-  <h1> <%= @tmp %> </h1>
