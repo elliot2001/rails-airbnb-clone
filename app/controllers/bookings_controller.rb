@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+   def index
+    @bookings = Booking.all
 
   def new
     @castle = Castle.find(params[:castle_id])
