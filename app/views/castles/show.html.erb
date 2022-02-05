@@ -49,7 +49,6 @@
     </li>
   </ul><br>
 <%= @castle.description %>
-<div class="bouton-reservation btn btn-secondary btn-lg btn-block">
-  <%= link_to "Réserver ce château", new_castle_booking_path(@castle.id) %>
-</div>
+<div class="bouton-reservation"></div>
+  <%= link_to "Réserver ce château", new_castle_booking_path(@castle.id), class: "btn btn-secondary btn-lg btn-block" %>
 </div>
