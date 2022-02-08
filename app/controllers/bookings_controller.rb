@@ -30,17 +30,17 @@ class BookingsController < ApplicationController
     redirect_to booking_path(@booking)
   end
 
-  #   def update
-  #   @booking = Booking.find(params[:id])
-  #   @castle = @booking.castle
+#   def update
+#   @booking = Booking.find(params[:id])
+#   @castle = @booking.castle
 
-  #   if @booking.update(booking_params)
-  #     redirect_to @booking
-  #     flash[:notice] = 'La mise-à-jour des informations a bien été prise en compte.'
-  #   else
-  #     render :index
-  #   end
-  # end
+#   if @booking.update(booking_params)
+#   redirect_to @booking
+#   flash[:notice] = 'La mise-à-jour des informations a bien été prise en compte.'
+#   else
+#   render :index
+#   end
+#  end
 
   def destroy
     set_booking
