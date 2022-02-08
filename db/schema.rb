@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_02_05_121501) do
     t.date "arrival_date"
     t.date "departure"
     t.integer "number_of_people"
-    t.integer "status"
+    t.integer "status", default: 0
     t.bigint "user_id", null: false
     t.bigint "castle_id", null: false
     t.datetime "created_at", precision: 6, null: false

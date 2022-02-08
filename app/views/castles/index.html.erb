@@ -6,30 +6,38 @@
 <div class="d-flex justify-content-center">
   <div class="row">
     <% @castles.each do |castle| %>
-      <div class="cards">
-        <div class="flat-card">
-          <div class="flat-card-image" style="background-image: url(https://source.unsplash.com/300x200/?castles)"></div>
-          <div class="flat-card-content">
-            <div class="flat-card-title">
-              <h4><%= castle.title %></h4>
+
+      <% @bookings.each do |bk| %>
+        <h1>oeoeoeoeoe</h1>
+      <% end %>
+
+        <div class="cards">
+          <div class="flat-card">
+            <div class="flat-card-image" style="background-image: url(https://source.unsplash.com/300x200/?castles)"></div>
+            <div class="flat-card-content">
+              <div class="flat-card-title">
+                <h4><%= castle.title %></h4>
+              </div>
+              <p><%= castle.address %></p>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><%= castle.max_capacity %>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+                <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/></svg><%= castle.price %>
+              </div>
             </div>
-            <p><%= castle.address %></p>
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-              <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><%= castle.max_capacity %>
+            <div class="flat-card-actions">
+              <%= link_to 'More info', castle_path(castle) %>
             </div>
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
-              <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/></svg><%= castle.price %>
-            </div>
-          </div>
-          <div class="flat-card-actions">
-            <%= link_to 'More info', castle_path(castle) %>
           </div>
         </div>
-      </div>
+
+
+
     <% end %>
   </div>
 </div>

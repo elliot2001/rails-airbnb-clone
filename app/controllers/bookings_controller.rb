@@ -20,6 +20,10 @@ class BookingsController < ApplicationController
     end
   end
 
+  def power_control
+    
+  end
+
   private
 
   def parse_date(str_date)
