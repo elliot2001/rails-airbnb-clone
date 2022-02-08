@@ -1,7 +1,15 @@
 class CastlesController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
   def index
-    @castles = Castle.all
+    @castles = Castle.where.not(latitude: nil, longitude: nil)
+
+    @markers = @castles.geocoded.map do |castle|
+      {
+        lat: castle.latitude,
+        lng: castle.longitude
+      }
+    end
+
   end
 
   def show
