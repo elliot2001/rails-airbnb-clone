@@ -6,12 +6,12 @@
   width: 80%;
   justify-content: space-between;
   margin-bottom: 30px;
-  
+
 }
 
 .cards {
   grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 80px auto 80px; 
+  grid-template-rows: 80px auto 80px;
   column-gap: 20px;
 }
 
@@ -59,4 +59,21 @@
   position: relative;
   border-top: 1px solid rgba(160,160,160,0.2);
   padding: 16px 24px;
+}
+
+.modal-body-details {
+  font-size: 12px;
+}
+
+.modal-title {
+  margin-bottom: 5px;
+}
+
+.modal-body-details {
+  text-align: center;
+}
+
+.modal-description {
+  font-size: 12px;
+  text-align: justify;
 }
