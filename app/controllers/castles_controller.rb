@@ -1,12 +1,18 @@
 class CastlesController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
   def index
-    @castles = Castle.where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR address ILIKE :query"
+      @castles = Castle.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @castles = Castle.where.not(latitude: nil, longitude: nil)
+    end
 
     @markers = @castles.geocoded.map do |castle|
       {
         lat: castle.latitude,
-        lng: castle.longitude
+        lng: castle.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { castle: castle })
       }
     end
 

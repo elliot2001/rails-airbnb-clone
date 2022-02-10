@@ -1,0 +1,17 @@
+.mapboxgl-popup-content {
+  text-align: center;
+  margin: 10px;
+}
+
+.flat-card-image-popin {
+  height: 15vh;
+  background-position: center;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
