@@ -2,14 +2,13 @@ import flatpickr from "flatpickr";
 
 const initFlatpickr = () => {
   flatpickr(".datepicker", {
-    enable: [
-      {
-        from: "2022-02-10",
-        to: "2022-02-15"
-      },
-      {
-        from: "2022-02-23",
-        to: "2022-03-20"
+    mode: "range",
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    disable: [
+      function (date) {
+        // disable every multiple of 8
+        return !(date.getDate() % 5);
       }
     ]
   });
