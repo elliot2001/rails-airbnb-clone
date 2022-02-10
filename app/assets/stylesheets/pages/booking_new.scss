@@ -1,8 +1,20 @@
+.booking-new {
+  border: 1px solid #dddd;
+  margin-top: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding: 20px
+}
+
 .booking-title {
-  margin-left: 180px;
+  text-align: center;
 }
 
 .form-booking {
-  margin-left: 180px;
-  padding-bottom: 35px;
+  text-align: center;
+  margin: auto;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 550px - 80px);
 }
