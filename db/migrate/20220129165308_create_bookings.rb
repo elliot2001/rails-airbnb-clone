@@ -4,7 +4,7 @@ class CreateBookings < ActiveRecord::Migration[6.0]
       t.date :arrival_date
       t.date :departure
       t.integer :number_of_people
-      t.integer :status
+      t.integer :status, default: 0
       t.references :user, null: false, foreign_key: true
       t.references :castle, null: false, foreign_key: true
 
