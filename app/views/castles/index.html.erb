@@ -51,15 +51,19 @@
                         <i class="fas fa-home"></i> Logement entier <i class="fas fa-broom"></i> Nettoyage renforcé <i class="fas fa-times"></i> Annulation gratuite
                     </div>
                     <br>
-                    <!-- Modal CAROUSEL -->
+                    <!--  CAROUSEL -->
                     <div class="modal-carousel">
+
                       <div id="carouselExampleIndicators_<%= castle.id %>" class="carousel slide" data-ride="carousel">
+
                         <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="1"></li>
                           <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="2"></li>
                         </ol>
+
                         <div class="carousel-inner">
+
                           <div class="carousel-item active">
                             <%= image_tag("chato", class: "d-block w-100", alt: "First slide") %>
                           </div>
@@ -69,6 +73,7 @@
                           <div class="carousel-item">
                             <%= image_tag("interieur", class: "d-block w-100", alt: "Third slide") %>
                           </div>
+
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -80,6 +85,7 @@
                         </a>
                       </div>
                     </div>
+
                     <div class="modal-description">
                       <br>
                       <%= castle.description %>
