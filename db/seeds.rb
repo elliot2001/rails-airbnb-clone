@@ -59,12 +59,9 @@ date_refused1_2 = Date.new(2022,6,24)
 
 
 
-
-
 Booking.create(arrival_date: date_passed1, departure: date_passed1_2, number_of_people: 42, status: 3, user: elliot, castle: versailles)
 Booking.create(arrival_date: date_passed2, departure: date_passed2_2, number_of_people: 75, status: 3, user: elliot, castle: giverny)
 
-Booking.create(arrival_date: date_pending1, departure: date_pending1_2, number_of_people: 24, status: 0, user: elliot, castle: julia_castle)
 Booking.create(arrival_date: date_pending2, departure: date_pending2_2, number_of_people: 5, status: 0, user: elliot, castle: versailles)
 
 Booking.create(arrival_date: date_accepted1, departure: date_accepted1_2, number_of_people: 24, status: 1, user: elliot, castle: julia_castle)
