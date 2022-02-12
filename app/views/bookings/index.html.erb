@@ -27,12 +27,12 @@
                     <% if bk.status_pending? || bk.status_accepted? %>
                       <div class="card castle-card">
                         <div class="card-body">
-                          <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
+                          <%= image_tag bk.castle.photo_url, alt: "Photo du château", class: "picture-card" %>
                           <div class="card-infos">
                             <h5 class="card-title"><%= bk.castle.title %></h5>
                             <p class="card-details">
                             <i class="fas fa-map-marker-alt"></i> <%= bk.castle.address %><br>
-                            <i class="fas fa-user"></i> <%= bk.castle.max_capacity %> voyageurs<br>
+                            <i class="fas fa-user"></i> <%= bk.number_of_people %> voyageurs<br>
                             <i class="fas fa-solid fa-calendar-day"></i> <%= bk.arrival_date %>
                             <%= bk.departure %><br>
                             <%= link_to 'Modifier votre réservation', edit_booking_path(bk), class: "btn btn-secondary" %>
@@ -67,12 +67,12 @@
                   <% if bk.status_passed? || bk.status_refused? %>
                     <div class="card castle-card">
                       <div class="card-body">
-                        <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
+                        <%= image_tag bk.castle.photo_url, alt: "Photo du château", class: "picture-card" %>
                         <div class="card-infos">
                           <h5 class="card-title"><%= bk.castle.title %></h5>
                           <p class="card-details">
                           <i class="fas fa-map-marker-alt"></i> <%= bk.castle.address %><br>
-                          <i class="fas fa-user"></i> <%= bk.castle.max_capacity %> voyageurs<br>
+                          <i class="fas fa-user"></i> <%= bk.number_of_people %> voyageurs<br>
                           <i class="fas fa-solid fa-calendar-day"></i> <%= bk.arrival_date %>
                           <%= bk.departure %><br>
                           <i class="fas fa-solid fa-hourglass-clock"></i>
