@@ -7,14 +7,14 @@ body {
   z-index: 111111;
 }
 
-.btn-secondary {
+.btn-gold {
   background-color: #E2AB1A;
   border: solid #E2AB1A;
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 
-.btn-secondary:hover {
+.btn-gold:hover {
   background-color: black;
   border: solid black;
   color: white;

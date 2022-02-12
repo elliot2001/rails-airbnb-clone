@@ -5,6 +5,7 @@
   border-radius: 50px;
   transition: opacity 0.3s ease;
   margin-bottom: 20px;
+  margin: 5px;
 }
 
 .btn-filter:hover {
@@ -14,4 +15,15 @@
   padding: 8px 24px;
   border-radius: 50px;
   transition: opacity 0.3s ease;
+}
+
+.btn-filter-hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: #E2AB1A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  margin-bottom: 20px;
+  margin: 5px;
 }
