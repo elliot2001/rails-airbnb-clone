@@ -18,7 +18,13 @@
 }
 
 .card-infos {
-  padding: 20px;
+  padding: 10px 0 5px 20px;
+}
+
+.picture-card {
+  border-radius: 15px;
+  width: 350px;
+  height: 250px;
 }
 
 .card-text {
@@ -32,13 +38,22 @@
 .castle-price {
   color: #E2AB1A;
   font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #title-index {
-  margin: 40px;
+  margin: 30px;
 }
 
 hr {
   background-color: #E2AB1A;
 }
 
+.filter-card {
+  color: #E2AB1A;
+  transition: opacity 0.3s ease;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
