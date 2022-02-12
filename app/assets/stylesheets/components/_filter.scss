@@ -1,0 +1,17 @@
+.btn-filter {
+  color: #E2AB1A;
+  border: 1px solid #E2AB1A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-filter:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: #E2AB1A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+}
