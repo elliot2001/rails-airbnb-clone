@@ -1,21 +1,30 @@
-<div class= "d-flex justify-content-center flex-column align-items-center">
-  <h1>TOUS NOS CHATEAUX</h1>
-  <p>Nous avons <%= @castles.count %> chateau(x) à vous proposer.</p>
+<div class= "d-flex justify-content-center align-items-center">
+  <%= form_tag castles_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "search-bar-castle",
+      placeholder: "Trouve ton château"
+    %>
+    <%= submit_tag "Search", class: "btn btn-secondary" %>
+  <% end %>
+  </div>
 </div>
 
-<div class= "d-flex justify-content-center flex-column align-items-center">
-<%= form_tag castles_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "search-bar",
-    placeholder: "Trouve ton château"
-  %>
-  <%= submit_tag "Search", class: "btn btn-secondary" %>
-<% end %>
+<div id="filter" class= "d-flex justify-content-center">
+  <button data-filter= "all" class="btn btn-filter">Aucun filtre</button>
+  <button data-filter= "price" class="btn btn-filter">Prix</button>
+  <button data-filter= "max_capacity" class="btn btn-filter">Capacité</button>
+  <button data-filter= "hanted" class="btn btn-filter">Hanté</button>
+  <button data-filter= "douve" class="btn btn-filter">Douve</button>
+  <button data-filter= "elf" class="btn btn-filter">Elfe de maison</button>
+  <button data-filter= "father" class="btn btn-filter">Père Fouras</button>
+  <button data-filter= "monster" class="btn btn-filter">Monstre</button>
 </div>
 
-<div class="container-card">
-  <div class="all-cards">
+<div><p>Nous avons <%= @castles.count %> chateau(x) à vous proposer.</p></div>
+
+<div class="container-card ">
+  <div class="all-cards justify-content-center align-items-center">
     <div class="castle-cards">
       <% @castles.each do |castle| %>
       <div class="card castle-card">
