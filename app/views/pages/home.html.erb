@@ -53,92 +53,94 @@
         <% if index == 3 %>
         <% break %>
       <% end %>
-      <div class="card castle-card">
-        <div class="card-body">
-          <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
-          <div class="card-infos">
-            <h5 class="card-title"><%= castle.title %></h5>
-            <p class="card-details">
-            <i class="fas fa-map-marker-alt"></i> <%= castle.address %><br>
-            <i class="fas fa-user"></i> <%= castle.max_capacity %> voyageurs<br>
-            <strong class="castle-price"><%= castle.price %>€</strong> / nuit</p>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
-              En savoir plus
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="<%= "modal_#{castle.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-header-content">
-                      <h5 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h5>
-                      <div class="modal-body-details">
-                        <%= castle.address %>  •  <%= castle.max_capacity %> voyageurs  •  <%= castle.price %>€ / nuit
-                      </div>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="modal-body-details d-flex justify-content-around align-self-baseline">
-                        <i class="fas fa-home"></i> Logement entier <i class="fas fa-broom"></i> Nettoyage renforcé <i class="fas fa-times"></i> Annulation gratuite
-                    </div>
-                    <br>
-                    <!--  CAROUSEL -->
-                    <div class="modal-carousel">
-
-                      <div id="carouselExampleIndicators_<%= castle.id %>" class="carousel slide" data-ride="carousel">
-
-                        <ol class="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="1"></li>
-                          <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="2"></li>
-                        </ol>
-
-                        <div class="carousel-inner">
-
-                          <div class="carousel-item active">
-                            <%= image_tag("chato.jpg", class: "d-block w-100", alt: "First slide") %>
-                          </div>
-                          <div class="carousel-item">
-                            <%= image_tag("piece.png", class: "d-block w-100", alt: "Second slide") %>
-                          </div>
-                          <div class="carousel-item">
-                            <%= image_tag("interieur.png", class: "d-block w-100", alt: "Third slide") %>
-                          </div>
-
+      <div class="castle-card">
+          <div class="card-body">
+            <%= image_tag castle.photo_url, alt: "Photo du château", class: "picture-card" %>
+            <div class="card-infos">
+              <h5 class="card-title"><%= castle.title %></h5>
+              <p class="card-details">
+              <i class="fas fa-map-marker-alt"></i> <%= castle.address %><br>
+              <i class="fas fa-user"></i> <%= castle.max_capacity %> voyageurs<br>
+              <strong class="castle-price"><%= castle.price %>€</strong> / nuit<br></p>
+              <p class="filter-card">#<%= castle.features %></p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-gold" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
+                En savoir plus
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="<%= "modal_#{castle.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="modal-header-content">
+                        <h1 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h1>
+                        <div class="modal-details">
+                          <%= castle.address %>  •  <%= castle.max_capacity %> voyageurs  •  <%= castle.price %>€ / nuit
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
+                      </div>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="modal-body-details d-flex justify-content-around align-self-baseline">
+                      </div>
+                      <div class="modal-details-castle">
+                        <i class="fas fa-home"></i> Logement entier<br><i class="fas fa-broom"></i> Nettoyage renforcé<br><i class="fas fa-times"></i> Annulation gratuite
+                      </div>
+                      <br>
+                      <!--  CAROUSEL -->
+                      <div class="modal-carousel">
+
+                        <div id="carouselExampleIndicators_<%= castle.id %>" class="carousel slide" data-ride="carousel">
+
+                          <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="2"></li>
+                          </ol>
+
+                          <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                              <%= image_tag("chato.jpg", class: "d-block w-100", alt: "First slide") %>
+                            </div>
+                            <div class="carousel-item">
+                              <%= image_tag("piece.png", class: "d-block w-100", alt: "Second slide") %>
+                            </div>
+                            <div class="carousel-item">
+                              <%= image_tag("interieur.png", class: "d-block w-100", alt: "Third slide") %>
+                            </div>
+
+                          </div>
+                          <a class="carousel-control-prev" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="modal-description">
+                        <br>
+                        <%= castle.description %>
                       </div>
                     </div>
-
-                    <div class="modal-description">
-                      <br>
-                      <%= castle.description %>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary" %>
+                    <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary reservation" %>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <hr>
         </div>
-      </div>
-      <% end %>
-    </div>
-  </div>
-  <div id="map" style="width: 70%; height: 900px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key='pk.eyJ1Ijoid25kZXJqdWx6IiwiYSI6ImNrd3pkMXNmdjA1ZzAycnFsbW5vbXdscGgifQ.K_GyF4vdEd73MyqGx_vaag'></div>
+            <% end %>
+          </div>
+        </div>
+    <div id="map" style="width: 70%; height: 900px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key='pk.eyJ1Ijoid25kZXJqdWx6IiwiYSI6ImNrd3pkMXNmdjA1ZzAycnFsbW5vbXdscGgifQ.K_GyF4vdEd73MyqGx_vaag'></div>
 </div>
 
 </div>
