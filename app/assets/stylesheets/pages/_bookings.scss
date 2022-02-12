@@ -6,15 +6,12 @@
 
 .col1 {
     padding: 1em;
-    width: 70%;
+    width: 85%;
     z-index: 11111;
 }
-.col1 h1{
-    margin-top: 200px;
-}
 
-.col1 p{
-  margin-bottom: 30px;
+.col1 h1{
+  margin-top: 18px;
 }
 
 .image-dashboard{
@@ -135,4 +132,59 @@ border: solid #E2AB1A 1px;
 /*---------------VOYAGE----------------*/
 .tab-content > .active {
   display: flex;
+}
+
+.status_box {
+  border-radius: 26px;
+  width: 498px;
+  height: 36px;
+}
+
+.pending {
+  border: solid grey;
+}
+
+.accepted {
+  border: solid green;
+}
+
+.refused {
+  border: solid red;
+}
+
+.status_box p{
+  text-align: center;
+  margin-top: 5px;
+}
+
+p {
+  margin: 0;
+}
+
+i {
+  margin-bottom: 10px;
+}
+
+.card_box {
+
+  justify-content: center;
+}
+
+.all_card_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper-index {
+  min-height: calc(150vh - 550px - 80px);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #E2AB1A;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: #E2AB1A;
 }

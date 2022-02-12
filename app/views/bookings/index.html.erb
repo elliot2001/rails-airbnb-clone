@@ -4,97 +4,110 @@
       <h1>Mes réservations<span id="point">.</span></h1>
       <p>Vous retrouverez ici les différentes réservations en attentes, validées ou refusées</p>
 
-      <div class="search-bar">
-        <form action="/castles" class="form-inline padded">
-            <input type="text" class="form-control border-radius input-md" placeholder="">
-            <input type="submit" class="btn btn-warning btn-lg ms-15" value="Voir tous les châteaux">
-        </form>
-      </div>
     </div>
     <!------------------ image ------------------->
     <div class="image-dashboard"></div>
   </div>
-</div>
-
-<!------------------ RESERVATIONS ------------------->
-<h2 id="h2-reservations">Paramètres<span id="point">.</span></h2>
-<div class="reservations">
-  <!------------------ LISTE PARAMETRE ------------------->
-    <div class="list-parametre">
-      <ul>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="#E2AB1A" class="bi bi-gear" viewBox="0 0 16 16">
-        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-        </svg>Notifications</li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="#E2AB1A" class="bi bi-gear" viewBox="0 0 16 16">
-        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-        </svg>Paiements et versements</li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="#E2AB1A" class="bi bi-gear" viewBox="0 0 16 16">
-        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-        </svg>Publier votre annonce</li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="#E2AB1A" class="bi bi-gear" viewBox="0 0 16 16">
-        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-        </svg>Carte Cadeaux</li>
-      </ul>
-    </div>
-
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <div class="dash-container">
+      <!------------------ image ------------------->
+        <div class="col1">
+          <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">En attende</a>
+              <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Vos reservations en attentes</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" id="accepted-tab" data-toggle="tab" href="#accepted" role="tab" aria-controls="accepted" aria-selected="false">Accepte</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="refused-tab" data-toggle="tab" href="#refused" role="tab" aria-controls="refused" aria-selected="false">Refuse</a>
+              <a class="nav-link" id="accepted-tab" data-toggle="tab" href="#accepted" role="tab" aria-controls="accepted" aria-selected="false">Votre historique</a>
             </li>
           </ul>
-
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-              <% @bookings.each do |bk| %>
-                <% if bk.status_pending? %>
-                  <div class="card-product">
-                    <%= image_tag "reservations.jpg", alt: "Chateau 1", class: "rounded", width: 350 %>
-                    <div class="card-product-infos">
-                      <h2><%= bk.castle.title %></h2>
-                      <p> <%= bk.castle.description %> </p>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-            </div>
-            <div class="tab-pane fade" id="accepted" role="tabpanel" aria-labelledby="accepted-tab">
-              <% @bookings.each do |bk| %>
-                <% if bk.status_accepted? %>
-                  <div class="card-product">
-                    <%= image_tag "reservations.jpg", alt: "Chateau 1", class: "rounded", width: 350 %>
-                    <div class="card-product-infos">
-                      <h2><%= bk.castle.title %></h2>
-                      <p> <%= bk.castle.description %> </p>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-            </div>
-            <div class="tab-pane fade" id="refused" role="tabpanel" aria-labelledby="refused-tab">
-              <% @bookings.each do |bk| %>
-                <% if bk.status_refused? %>
-                  <div class="card-product">
-                    <%= image_tag "reservations.jpg", alt: "Chateau 1", class: "rounded", width: 350 %>
-                    <div class="card-product-infos">
-                      <h2><%= bk.castle.title %></h2>
-                      <p> <%= bk.castle.description %> </p>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-            </div>
+              <div class="all_card_box justify-centent-center">
+                <div class="card_box">
+                  <% @bookings.each do |bk| %>
+                    <% if bk.status_pending? || bk.status_accepted? %>
+                      <div class="card castle-card">
+                        <div class="card-body">
+                          <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
+                          <div class="card-infos">
+                            <h5 class="card-title"><%= bk.castle.title %></h5>
+                            <p class="card-details">
+                            <i class="fas fa-map-marker-alt"></i> <%= bk.castle.address %><br>
+                            <i class="fas fa-user"></i> <%= bk.castle.max_capacity %> voyageurs<br>
+                            <i class="fas fa-solid fa-calendar-day"></i> <%= bk.arrival_date %>
+                            <%= bk.departure %><br>
+                            <%= link_to 'Modifier votre réservation', edit_booking_path(bk), class: "btn btn-secondary" %>
+                            <%= link_to 'Supprimer votre réservation', bk, method: :delete, data: { confirm: 'Êtes vous sûre ?' }, class: "btn btn-secondary" %>
+                            <i class="fas fa-solid fa-hourglass-clock"></i>
+                            <% case bk.status %>
+                              <% when "pending" %>
+                                <div class="status_box pending">
+                                  <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+                                    <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                                  </svg> En attente de confirmation </p>
+                                </div>
+                              <% when "accepted" %>
+                              <div class="status_box accepted">
+                                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>Réservation confirmée!</p>
+                              </div>
+                            <% end %>                      
+                          </div>
+                        </div>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
           </div>
+          <div class="tab-pane fade" id="accepted" role="tabpanel" aria-labelledby="accepted-tab">
+            <div class="all_card_box justify-centent-center">
+              <div class="card_box">
+                <% @bookings.each do |bk| %>
+                  <% if bk.status_passed? || bk.status_refused? %>
+                    <div class="card castle-card">
+                      <div class="card-body">
+                        <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
+                        <div class="card-infos">
+                          <h5 class="card-title"><%= bk.castle.title %></h5>
+                          <p class="card-details">
+                          <i class="fas fa-map-marker-alt"></i> <%= bk.castle.address %><br>
+                          <i class="fas fa-user"></i> <%= bk.castle.max_capacity %> voyageurs<br>
+                          <i class="fas fa-solid fa-calendar-day"></i> <%= bk.arrival_date %>
+                          <%= bk.departure %><br>
+                          <i class="fas fa-solid fa-hourglass-clock"></i>
+                          <% case bk.status %>
+                          <% when "refused" %>
+                            <div class="status_box refused">
+                              <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                              </svg>Réservation refusée</p>
+                            </div>
+                          <% when "passed" %>
+                            <div class="status_box accepted">
+                              <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                              </svg>Réservation confirmée!</p>
+                            </div>
+                          <% end %>                      
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
 </div>
+</div>
+
+
+
+
 <!------------------ ASTUCE FOOTER ------------------->
-<div class="content-wrapper">
+<div class="content-wrapper-index">
 </div>

@@ -1,17 +1,43 @@
-.booking-new {
-  margin-top: 50px;
-  margin-left: 400px;
-  margin-right: 400px;
-  padding: 20px
+.booking-retour {
+  margin-top: 30px;
+  margin-left: 135px;
 }
 
-.booking-title {
-  text-align: center;
+.booking-castle {
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
-.form-booking {
+.booking-detail {
+  // border: 1px solid #E2AB1A;
+  // border-radius: 15px;
   text-align: center;
-  margin: auto;
+  width: 70%;
+  margin-right: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.details {
+  color: #E2AB1A;
+  margin-bottom: 10px;
+}
+.booking-reservation {
+  // border: 1px solid #cfd4d9;
+  margin-top: 20px;
+  width: 30%;
+  position: sticky;
+  top: 0;
+}
+
+.carousel-booking {
+  width: 750px;
+}
+
+.resa-form {
+  margin-top: 0;
 }
 
 .content-wrapper {

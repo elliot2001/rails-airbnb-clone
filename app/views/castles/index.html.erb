@@ -18,7 +18,7 @@
       class: "search-bar-castle",
       placeholder: "Trouve ton château"
     %>
-    <%= submit_tag "Search", class: "btn btn-gold" %>
+    <%= submit_tag "Chercher", class: "btn btn-gold" %>
   <% end %>
   </div>
 </div>
@@ -29,13 +29,14 @@
       <% @castles.each do |castle| %>
       <div class="castle-card">
         <div class="card-body">
-          <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
+          <%= image_tag castle.photo_url, alt: "Photo du château", class: "picture-card" %>
           <div class="card-infos">
             <h5 class="card-title"><%= castle.title %></h5>
             <p class="card-details">
             <i class="fas fa-map-marker-alt"></i> <%= castle.address %><br>
             <i class="fas fa-user"></i> <%= castle.max_capacity %> voyageurs<br>
-            <strong class="castle-price"><%= castle.price %>€</strong> / nuit</p>
+            <strong class="castle-price"><%= castle.price %>€</strong> / nuit<br></p>
+            <p class="filter-card">#<%= castle.features %></p>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-gold" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
               En savoir plus
