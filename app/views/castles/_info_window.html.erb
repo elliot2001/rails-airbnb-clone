@@ -1,0 +1,8 @@
+<div class="flat-card-image-popin" style="background-image: url(https://source.unsplash.com/20x20/?castles)"></div>
+<div class="mapboxgl-popup-content">
+  <h4><%= castle.title %></h4>
+  <p><%= castle.address %></p>
+  <div>
+    <%= link_to 'Réserver', castle_path(castle) %>
+  </div>
+</div>

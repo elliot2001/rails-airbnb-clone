@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   margin-left: 150px;
-  margin-right: 135px;
+  margin-right: 165px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,14 +12,15 @@
   width: 200px;
 }
 
-.nav-item-logout {
-  color: black;
+.menu-log-out {
   text-decoration: none;
-  padding: 0px 10px;
+  color: black;
+  margin-left: 23px;
 }
 
-.nav-item-logout a {
-  color: black;
+.menu-log-out:hover {
   text-decoration: none;
-  padding: 0px 10px;
+  color: black;
+  margin-left: 23px;
+  background-color: #eaecef;
 }
