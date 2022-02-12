@@ -2,7 +2,5 @@
 <div class="mapboxgl-popup-content">
   <h4><%= castle.title %></h4>
   <p><%= castle.address %></p>
-  <div>
-    <%= link_to 'Réserver', castle_path(castle) %>
-  </div>
+  <%= link_to 'Réserver', castle_path(castle), class: "btn btn-gold" %>
 </div>

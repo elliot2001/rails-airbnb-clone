@@ -1,19 +1,9 @@
-<div class= "d-flex justify-content-center align-items-center">
-  <%= form_tag castles_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "search-bar-castle",
-      placeholder: "Trouve ton château"
-    %>
-    <%= submit_tag "Search", class: "btn btn-secondary" %>
-  <% end %>
-  </div>
+<div class="d-flex justify-content-center" id="title-index"><br>
+<h1>Nous avons <strong><span id="point"><%= @castles.count %></span></strong> chateau(x) à vous proposer<span id="point">.</span></h1>
 </div>
 
 <div id="filter" class= "d-flex justify-content-center">
-  <button data-filter= "all" class="btn btn-filter">Aucun filtre</button>
-  <button data-filter= "price" class="btn btn-filter">Prix</button>
-  <button data-filter= "max_capacity" class="btn btn-filter">Capacité</button>
+  <button data-filter= "all" class="btn btn-filter-hover">Aucun filtre</button>
   <button data-filter= "hanted" class="btn btn-filter">Hanté</button>
   <button data-filter= "douve" class="btn btn-filter">Douve</button>
   <button data-filter= "elf" class="btn btn-filter">Elfe de maison</button>
@@ -21,13 +11,23 @@
   <button data-filter= "monster" class="btn btn-filter">Monstre</button>
 </div>
 
-<div><p>Nous avons <%= @castles.count %> chateau(x) à vous proposer.</p></div>
+<div class= "d-flex justify-content-center align-items-center">
+  <%= form_tag castles_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "search-bar-castle",
+      placeholder: "Trouve ton château"
+    %>
+    <%= submit_tag "Search", class: "btn btn-gold" %>
+  <% end %>
+  </div>
+</div>
 
 <div class="container-card ">
-  <div class="all-cards justify-content-center align-items-center">
+  <div class="all-cards justify-content-center">
     <div class="castle-cards">
       <% @castles.each do |castle| %>
-      <div class="card castle-card">
+      <div class="castle-card">
         <div class="card-body">
           <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
           <div class="card-infos">
@@ -37,7 +37,7 @@
             <i class="fas fa-user"></i> <%= castle.max_capacity %> voyageurs<br>
             <strong class="castle-price"><%= castle.price %>€</strong> / nuit</p>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
+            <button type="button" class="btn btn-gold" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
               En savoir plus
             </button>
             <!-- Modal -->
@@ -46,8 +46,8 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <div class="modal-header-content">
-                      <h5 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h5>
-                      <div class="modal-body-details">
+                      <h1 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h1>
+                      <div class="modal-details">
                         <%= castle.address %>  •  <%= castle.max_capacity %> voyageurs  •  <%= castle.price %>€ / nuit
                       </div>
                     </div>
@@ -57,7 +57,9 @@
                   </div>
                   <div class="modal-body">
                     <div class="modal-body-details d-flex justify-content-around align-self-baseline">
-                        <i class="fas fa-home"></i> Logement entier <i class="fas fa-broom"></i> Nettoyage renforcé <i class="fas fa-times"></i> Annulation gratuite
+                    </div>
+                    <div class="modal-details-castle">
+                      <i class="fas fa-home"></i> Logement entier<br><i class="fas fa-broom"></i> Nettoyage renforcé<br><i class="fas fa-times"></i> Annulation gratuite
                     </div>
                     <br>
                     <!--  CAROUSEL -->
@@ -100,14 +102,13 @@
                       <%= castle.description %>
                     </div>
                   </div>
-                  <div class="modal-footer">
-                    <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary" %>
-                  </div>
+                  <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary reservation" %>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <hr>
       </div>
       <% end %>
     </div>

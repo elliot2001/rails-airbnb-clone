@@ -1,5 +1,4 @@
 .booking-new {
-  border: 1px solid #dddd;
   margin-top: 50px;
   margin-left: 400px;
   margin-right: 400px;
@@ -17,4 +16,9 @@
 
 .content-wrapper {
   min-height: calc(100vh - 550px - 80px);
+}
+
+::placeholder {
+  font-style: italic;
+  font-weight: 300;
 }
