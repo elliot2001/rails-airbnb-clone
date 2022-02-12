@@ -48,25 +48,8 @@
 
 
 
-        <div class="container">
-          <div class="voyage_tab">
-            <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">En attende</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="accepted-tab" data-toggle="tab" href="#accepted" role="tab" aria-controls="accepted" aria-selected="false">Accepte</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="refused-tab" data-toggle="tab" href="#refused" role="tab" aria-controls="refused" aria-selected="false">Refuse</a>
-              </li>
-            </ul>
-          </div>
-          
 
-
-        <div class="voyage_card">
-          <div class="tab-content d-flex" id="myTabContent">
+          <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
               <% @bookings.each do |bk| %>
                 <% if bk.status_pending? %>
@@ -113,4 +96,7 @@
       </div>
 
 
+</div>
+<!------------------ ASTUCE FOOTER ------------------->
+<div class="content-wrapper">
 </div>
