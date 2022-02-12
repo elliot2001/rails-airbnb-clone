@@ -46,8 +46,8 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <div class="modal-header-content">
-                      <h5 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h5>
-                      <div class="modal-body-details">
+                      <h1 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h1>
+                      <div class="modal-details">
                         <%= castle.address %>  •  <%= castle.max_capacity %> voyageurs  •  <%= castle.price %>€ / nuit
                       </div>
                     </div>
@@ -57,7 +57,9 @@
                   </div>
                   <div class="modal-body">
                     <div class="modal-body-details d-flex justify-content-around align-self-baseline">
-                        <i class="fas fa-home"></i> Logement entier <i class="fas fa-broom"></i> Nettoyage renforcé <i class="fas fa-times"></i> Annulation gratuite
+                    </div>
+                    <div class="modal-details-castle">
+                      <i class="fas fa-home"></i> Logement entier<br><i class="fas fa-broom"></i> Nettoyage renforcé<br><i class="fas fa-times"></i> Annulation gratuite
                     </div>
                     <br>
                     <!--  CAROUSEL -->
@@ -100,9 +102,7 @@
                       <%= castle.description %>
                     </div>
                   </div>
-                  <div class="modal-footer">
-                    <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary" %>
-                  </div>
+                  <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary reservation" %>
                 </div>
               </div>
             </div>
