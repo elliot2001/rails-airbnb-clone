@@ -48,6 +48,10 @@ class BookingsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    set_booking
+  end
+
     def set_status_accepted
     @booking.mark('Valider')
     redirect_to @booking

@@ -35,3 +35,4 @@ Castle.create(id: 10, address: "Azay-le-Rideau", title: "Azay-le-Rideau", price:
 
 
 # bookings pour r créer le sbookings
+

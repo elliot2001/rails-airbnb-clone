@@ -100,6 +100,7 @@ border: solid #E2AB1A 1px;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  margin: 20px 0px;
 }
 
 .card-product img {
@@ -128,4 +129,10 @@ border: solid #E2AB1A 1px;
 #commentaires{
   font-weight: 500;
   color: #E2AB1A;
+}
+
+
+/*---------------VOYAGE----------------*/
+.tab-content > .active {
+  display: flex;
 }
