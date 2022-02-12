@@ -1,14 +1,22 @@
  <!-------------------- Homepage ------------------->
 <div class="container">
   <div class="intro-homepage-container">
-    <div class="col">
+    <div class="col-homepage">
       <h1>Recherche ta prochaine destination<span id="point">.</span></h1>
       <p>N'attendez pas pour vivre une expérience dans un château dans le monde</p>
       <div class="search-bar">
-        <form action="/castles" class="form-inline padded">
-            <input type="text" class="form-control border-radius input-lg" placeholder="">
-            <input type="submit" class="btn btn-warning btn-lg ms-15" value="Voir tous les châteaux">
-        </form>
+          <div class="search-form-control form-group">
+          <%= form_tag castles_path, method: :get do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "search-bar-castle",
+                placeholder: "Trouve ton château"
+              %>
+                <button name="button-homepage" type="submit" class="btn btn-flat">
+                  <i class="fas fa-search"></i> Rechercher
+                </button>
+          </div>
+        <% end %>
       </div>
       <!---------------------- Number ------------------------->
       <div class="number">
@@ -36,6 +44,103 @@
 </div>
 
     <!------------------ List des chateaux populaire ---------------->
+
+    <h2 class="title-populaire">Populaire<span id="point">.</span></h2>
+
+<div class="container-card ">
+  <div class="all-cards justify-content-center align-items-center">
+    <div class="castle-cards">
+      <% @castles.each_with_index do |castle, index| %>
+        <% if index == 3 %>
+        <% break %>
+      <% end %>
+      <div class="card castle-card">
+        <div class="card-body">
+          <%= image_tag "reservations.jpg", alt: "Photo du château", class: "rounded", width: 350 %>
+          <div class="card-infos">
+            <h5 class="card-title"><%= castle.title %></h5>
+            <p class="card-details">
+            <i class="fas fa-map-marker-alt"></i> <%= castle.address %><br>
+            <i class="fas fa-user"></i> <%= castle.max_capacity %> voyageurs<br>
+            <strong class="castle-price"><%= castle.price %>€</strong> / nuit</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
+              En savoir plus
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="<%= "modal_#{castle.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="modal-header-content">
+                      <h5 class="modal-title" id="exampleModalLongTitle"><%= castle.title %></h5>
+                      <div class="modal-body-details">
+                        <%= castle.address %>  •  <%= castle.max_capacity %> voyageurs  •  <%= castle.price %>€ / nuit
+                      </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-body-details d-flex justify-content-around align-self-baseline">
+                        <i class="fas fa-home"></i> Logement entier <i class="fas fa-broom"></i> Nettoyage renforcé <i class="fas fa-times"></i> Annulation gratuite
+                    </div>
+                    <br>
+                    <!--  CAROUSEL -->
+                    <div class="modal-carousel">
+
+                      <div id="carouselExampleIndicators_<%= castle.id %>" class="carousel slide" data-ride="carousel">
+
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators_<%= castle.id %>" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+
+                          <div class="carousel-item active">
+                            <%= image_tag("chato.jpg", class: "d-block w-100", alt: "First slide") %>
+                          </div>
+                          <div class="carousel-item">
+                            <%= image_tag("piece.png", class: "d-block w-100", alt: "Second slide") %>
+                          </div>
+                          <div class="carousel-item">
+                            <%= image_tag("interieur.png", class: "d-block w-100", alt: "Third slide") %>
+                          </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators_<%= castle.id %>" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="modal-description">
+                      <br>
+                      <%= castle.description %>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <%= link_to "Je réserve", new_castle_booking_path(castle.id), class: "btn btn-secondary" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="map" style="width: 70%; height: 900px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key='pk.eyJ1Ijoid25kZXJqdWx6IiwiYSI6ImNrd3pkMXNmdjA1ZzAycnFsbW5vbXdscGgifQ.K_GyF4vdEd73MyqGx_vaag'></div>
+</div>
 
 </div>
 <!------------------ ASTUCE FOOTER ------------------->

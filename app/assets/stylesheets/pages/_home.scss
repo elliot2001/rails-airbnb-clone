@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 /*------------NAVBAR-----------*/
 .logo {
   width: 20%;
@@ -5,17 +9,6 @@
   z-index: 111111;
 }
 
-.btn-secondary {
-  background-color: #E2AB1A;
-  border: solid #E2AB1A;
-  z-index: 111111;
-}
-
-.btn-secondary:hover {
-  background-color: black;
-  border: solid black;
-  z-index: 111111;
-}
 /*------------Container Homepage-----------*/
 .container{
   width: 100%;
@@ -28,17 +21,17 @@
   justify-content: center;
 }
 
-.col {
+.col-homepage {
     flex: 1;
     padding: 1em;
     width: 50%;
     z-index: 11111;
 }
-.col h1{
+.col-homepage h1{
     margin-top: 200px;
 }
 
-.col p{
+.col-homepage p{
   margin-bottom: 30px;
 }
 
@@ -92,4 +85,48 @@
 
 .number-alignement{
   margin-right: 60px;
+}
+
+/*------------SEARCH BAR-----------*/
+.search-form-control {
+  position: relative;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  background-color: #E2AB1A;
+  color: white;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+}
+
+.search-form-control .form-control:focus {
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+button.btn.btn-flat{
+    height: 40px;
+    margin-top: -7px;
+    margin-right: 10px;
+    width: 30%;
+    border-radius: 0px;
+}
+
+i.fas.fa-search{
+  margin-top: -2px;
+}
+
+/*------------Populaire-----------*/
+
+.title-populaire{
+  margin-top: -60px;
+  margin-left: 100px;
 }

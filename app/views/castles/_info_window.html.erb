@@ -1,8 +1,10 @@
-<div class="flat-card-image-popin" style="background-image: url(https://source.unsplash.com/20x20/?castles)"></div>
-<div class="mapboxgl-popup-content">
-  <h4><%= castle.title %></h4>
-  <p><%= castle.address %></p>
-  <div>
-    <%= link_to 'Réserver', castle_path(castle) %>
-  </div>
+  <div mapboxgl-popup-content>
+    <%= image_tag castle.photo_url, alt: "Photo du château", class: "flat-card-image-popin" %>
+    <div>
+      <h4><%= castle.title %></h4>
+      <p><%= castle.address %></p>
+      <button type="button" class="btn btn-gold" data-toggle="modal" data-target="#<%= "modal_#{castle.id}" %>">
+        En savoir plus
+      </button>
+    </div>
 </div>

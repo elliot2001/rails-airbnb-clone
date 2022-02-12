@@ -1,27 +1,76 @@
-<div class="booking-new">
-
-  <div class="booking-title">
-    <h1>Réservez votre château<span id="point">.</span></h1>
-  </div>
-
-  <div class="form-booking" style="width: 400px">
-    <%= simple_form_for([@castle, @booking], method: "post") do |f| %>
-        <%= f.input :arrival_date, :label => "Arrivée", as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :departure, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :number_of_people %>
-        <%= f.button :submit, "Je réserve", class: "btn btn-secondary" %>
-      <%#= f.button :submit, "Proposer mes dates", class: "btn btn-secondary" %>
-    <% end %>
-  </div>
+<div class="booking-retour">
+  <%= link_to "Retour", :back, class: "btn btn-secondary reservation" %>
 </div>
 
-<div class="form-booking" style="width: 400px">
-  <%= simple_form_for([@castle, @booking], method: "post") do |f| %>
-      <%= f.input :arrival_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :departure, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :number_of_people, input_html: { max: @castle.max_capacity, min: 1, value: 1} %>
-      <%= f.button :submit, "Réservez", class: "btn btn-secondary" %>
-    <%#= f.button :submit, "Proposer mes dates", class: "btn btn-secondary" %>
-  <% end %>
-<div class="content-wrapper">
+<div class="booking-castle d-flex justify-content-around">
+
+  <div class="booking-detail">
+    <h1><%= @castle.title %></h1>
+    <div class="details">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+</svg> <%= @castle.address %> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg> <%= @castle.max_capacity %> voyageurs <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+  <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+</svg> <%= @castle.price %>€ / nuit
+    </div>
+
+    <div class="carousel-booking">
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <%= image_tag("chato.jpg", class: "d-block w-100", alt: "First slide") %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("piece.png", class: "d-block w-100", alt: "Second slide") %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("interieur.png", class: "d-block w-100", alt: "Third slide") %>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <%= @castle.description %>
+
+  </div>
+
+  <div class="booking-reservation">
+
+    <div class="booking-title">
+      <h1>Réserver votre château<span id="point">.</span></h1>
+    </div>
+
+    <div class="form-booking" style="width: 350px">
+      <%= simple_form_for([@castle, @booking], method: "post") do |f| %>
+          <%= f.input :arrival_date, :label => "Arrivée", placeholder: "Date d'arrivée", as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :departure, :label => "Départ", placeholder: "Date de départ", as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :number_of_people, :label => "Nombre de voyageurs (max : #{@castle.max_capacity} personnes)", input_html: { max: @castle.max_capacity, min: 1, value: 1} %>
+          <%# <%= f.button :submit, "Je réserve", class: "btn btn-secondary btn-lg btn-block reservation resa-form" %>
+          <%= link_to "Je réserve", bookings_path,class: "btn btn-secondary btn-lg btn-block reservation resa-form" %>
+        <%#= f.button :submit, "Proposer mes dates", class: "btn btn-secondary" %>
+      <% end %>
+    </div>
+
+  </div>
 </div>
+<!--------------------------FOOTER----------------------->
+<div class="content-wrapper"></div>
